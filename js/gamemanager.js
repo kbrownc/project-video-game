@@ -21,7 +21,7 @@ let gameManager = {
 		let getInterface = document.querySelector(".interface");
 		getInterface.innerHTML = '<img src="image/Avatar-player/' + 
 		classType.toLowerCase() + '.png" class="img-avatar"><div><h3>' + classType + 
-		'</h3><p>Health: ' + player.health + '</p><p>Mana: ' + player.mana + 
+		'</h3><p class="health-player">Health: ' + player.health + '</p><p>Mana: ' + player.mana + 
 		'</p><p>Strength: ' + player.strength + '</p><p>Agility: ' + player.agility + 
 		'</p><p>Speed: ' + player.speed + '</p></div>';
 	},
@@ -31,7 +31,7 @@ let gameManager = {
 		let getArena = document.querySelector(".arena");
 		getHeader.innerHTML = '<p>Task: Find a enemy!</p>';
 		getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="gameManager.setFight()">Search for enemy</a>';
-		getArena.style.visibility = "visibile";
+		getArena.innerHTML = '<div class="arena" style="visibility: visible;"></div>';
 	},
 	setFight: function() {
 		let getHeader = document.querySelector(".header");
